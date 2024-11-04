@@ -33,8 +33,8 @@ ____
 ```yaml
       DJANGO_DB_HOST: db
       DJANGO_DB_NAME: app
-      DJANGO_DB_USER: worker
-      DJANGO_DB_PASS: worker
+      DJANGO_DB_USER: postgres
+      DJANGO_DB_PASS: postgres
       DJANGO_DB_PORT: "5432"
       DJANGO_DEBUG: "False"
 ```
@@ -49,3 +49,22 @@ python3 manage.py migrate
 ```shell
 python3 manage.py runserver 0.0.0.0:8000
 ```
+
+## Запуск приложение через docker-compose
+
+##### 1) Клонировать репозиторий
+
+    git clone https://github.com/Shnikita2023/devops-sample-django-app.git
+
+
+##### 2) Установить docker на свою ОС
+
+    https://docs.docker.com/engine/install/
+
+##### 3) Запустить контейнеры через docker-compose
+
+    docker compose -f dev.yaml up -d
+
+##### 4) Перейти на стартовую страницу
+
+    Перейти по адресу localhost:8083
